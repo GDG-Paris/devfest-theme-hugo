@@ -69,7 +69,7 @@ googleAnalytics = "UA-XXXXXXXX-X"
     favicon16 = "/favicon-16x16.png"
     manifest = "/manifest.json"
     safariPinnedTab = "/safari-pinned-tab.svg"
-    themeColor = "#673ab7"
+    themeColor = "#a0dca8"
 
 [params.logos]
     jumbo = "/images/logos/devfest_color_text.png"
