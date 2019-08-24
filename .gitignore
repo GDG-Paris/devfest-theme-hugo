@@ -1,5 +1,7 @@
 .idea
 node_modules
 .rpt2_cache
-static
 devfest-theme-hugo.iml
+static/*.js
+static/*.css
+static/*.svg
