@@ -1,21 +1,20 @@
 body > header {
-
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100vw;
   .top-content {
     max-width: var(--theJdrSize);
-    margin: 0 auto;
+    margin: 4px auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
-  box-shadow: 0 var(--space-1) var(--primary),
-  0 var(--space-2) var(--space-1) var(--darken-3);
   background: var(--primary);
   color: var(--primary-txt);
+  border-bottom: 1px solid var(--darken-1);
+  box-shadow: 0 4px 2px -2px var(--darken-2);
 
   .logo img {
     height: calc(var(--toolbar-height) - (2 * var(--space-2)));
