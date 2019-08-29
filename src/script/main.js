@@ -1,4 +1,4 @@
 import './polyfills';
-// import './shuffle';
+import './shuffle';
 import './background';
 
