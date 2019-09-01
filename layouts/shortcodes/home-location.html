@@ -1,7 +1,7 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <section class="location">
 
-	<div class="map" style="background-image: url('{{ .Get "image" }}');"></div>
+	<div class="map" style="background-image: url('{{ relURL (path.Join "images" $.Site.Data.info.image) }}');"></div>
 
 	<div class="description">
 		<div class="inner">
@@ -9,9 +9,9 @@
 		</div>
 
 		<div class="direction">
-			{{ .Get "address" }}
+			{{ $.Site.Data.info.address.formattedAddress }}
 
-			<a href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"
+			<a href="https://www.google.com/maps/dir/?api=1&destination={{ $.Site.Data.info.address.latLng.lat }},{{ $.Site.Data.info.address.latLng.lng }}"
 				class="btn btn-icon-only" target="_blank" rel="noreferrer"
 			   aria-label="{{ i18n "home_location_direction" }}">
 				{{ partial "icon.html" "direction" }}
