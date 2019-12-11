@@ -3,8 +3,8 @@ a.btn, span.btn,
 input[type=button], input[type=reset], input[type=submit] {
   display: inline-flex;
   align-items: center;
-  border: thin solid var(--darken-3);
-  background: var(--darken-1);
+  border: thin solid var(--accent);
+  background: #FFFFFF;
   padding: var(--space-3);
   color: inherit;
   text-transform: uppercase;
@@ -25,8 +25,7 @@ input[type=button], input[type=reset], input[type=submit] {
 
   &.primary {
     background-color: var(--primary);
-    color: var(--primary-txt);
-    text-shadow: var(--extruded-dark);
+    color: var(--accent);
     --focus-color: var(--lighten-1);
     --active-color: var(--lighten-1);
   }
@@ -55,8 +54,9 @@ input[type=button], input[type=reset], input[type=submit] {
   }
 
   &:hover, &:focus {
-    background-image: linear-gradient(to right, var(--focus-color), var(--focus-color) 100%);
-    text-decoration: none;
+    background-color: var(--accent);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
   }
 
   .icon {
@@ -84,7 +84,7 @@ a.goto-top {
   width: 1em;
   height: 1em;
   justify-content: center;
-  border: .75em solid var(--primary);
+  border: .75em solid var(--accent);
   align-items: center;
   font-size: 200%;
   background-color: var(--primary);

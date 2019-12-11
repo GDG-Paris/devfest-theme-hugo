@@ -1,16 +1,16 @@
 
 .jumbo {
   position: relative;
-  height: calc(100vh - var(--toolbar-height));
+  height: 93vh;
+  min-height: 700px;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img.jumbo-logo {
-    max-width: 100%;
-    width: var(--jumbo-logo-width, 400px);
-    height: auto;
+    max-width: 600px;
+    width: 75vw;
     filter: drop-shadow(0px 1px 1px var(--darken-3));
   }
 
@@ -28,6 +28,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    opacity: .2;
   }
 
   #jumbo-img {
@@ -43,29 +44,36 @@
     bottom: 0;
     left: 0;
     opacity: 1;
+
     &.show {
       opacity: var(--jumbo-overlay-opacity, 0.6);
     }
   }
-  .inner-wrapper{
+
+  .inner-wrapper {
     max-width: 75vw;
+
     .inner {
       padding: var(--space-4);
-      color: var(--primary-txt);
+      color: #4d5b96;
       position: relative;
       overflow: hidden;
       text-align: center;
       display: flex;
       flex-direction: column;
+
       h2 {
         font-size: 2rem;
         margin: var(--space-3) 0;
         font-weight: bold;
+        color: var(--accent);
       }
+
       h3 {
         font-size: 1.8rem;
         margin: var(--space-3) 0;
       }
+
       a {
         align-self: center;
         margin: .5em;
@@ -80,7 +88,7 @@
     left: 0;
     transform: translateX(50vw);
     transform-origin: center center;
-    color: var(--base, white);
+    color: var(--accent);
 
     .icon {
       height: 2.5em;

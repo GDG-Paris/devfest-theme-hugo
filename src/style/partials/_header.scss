@@ -1,8 +1,10 @@
 body > header {
+  padding: 10px;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100vw;
+
   .top-content {
     max-width: var(--theJdrSize);
     margin: 4px auto 0;
@@ -11,6 +13,7 @@ body > header {
     justify-content: space-between;
     align-items: flex-start;
   }
+
   background: var(--primary);
   color: var(--primary-txt);
   border-bottom: 1px solid var(--darken-1);
@@ -71,11 +74,12 @@ body > header {
 
     li {
       opacity: .6;
+      color: var(--accent);
       transition: all var(--animation);
       border-bottom: thin solid transparent;
-      border-radius: 5%;
 
       &.active {
+        color: var(--primary-txt);
         opacity: 1;
         border-bottom-color: currentColor;
       }
