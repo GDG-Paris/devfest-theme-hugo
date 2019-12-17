@@ -1,7 +1,14 @@
+section.talk {
+  margin-top: 70px;
+}
 
 .talk {
   .complexity::before {
     content: 'Niveau : ';
+  }
+
+  .complexity::after {
+    content: ' ' var(--complexity, '');
   }
 
   .type::before {
@@ -57,6 +64,7 @@
       padding: var(--space-2);
       display: flex;
       align-items: center;
+      margin: 0 0 10px 0;
 
       h1 {
         flex-grow: 1;
@@ -72,8 +80,6 @@
       margin: var(--space-2) 0;
       padding: var(--space-2) 0;
       border-top: thin solid var(--darken-1);
-      border-bottom: thin solid var(--darken-1);
-      //display: flex;
     }
 
     .content {

@@ -8,6 +8,7 @@
   .hero {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 
     header, .description {
       padding: var(--space-4) var(--container-margin);
@@ -61,12 +62,18 @@
       }
     }
 
-
     .description {
 
       .talks {
         padding-left: 0;
         list-style: none;
+        max-width: var(--theJdrSize);
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+          margin: 10px 0;
+        }
 
         .talk {
           border: thin solid var(--darken-1);
