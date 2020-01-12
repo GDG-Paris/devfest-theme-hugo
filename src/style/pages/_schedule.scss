@@ -56,7 +56,7 @@
     justify-content: center;
     align-items: flex-start;
     color: var(--primary);
-    background-color: var(--primary-txt);
+    background-color: var(--lighten-3);
     margin: .125em;
 
     h3 {
@@ -64,12 +64,12 @@
       border-radius: var(--space-3);
       background-color: var(--primary-txt);
 
-      font-size: 1.5em;
+      font-size: 1.2em;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 1.75em;
+      height: 2.45em;
     }
   }
 
@@ -146,7 +146,7 @@
         text-shadow: 2px 1px 1px white;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        overflow: auto;
       }
 
       hr {
@@ -160,13 +160,8 @@
         justify-content: space-between;
         align-items: flex-start;
 
-        .complexity {
-          display: inline;
-          max-height: 1em;
-          svg {
-            height: 1.5em;
-            max-width: 1.5em;
-          }
+        .complexity::after {
+          content: ' ' var(--complexity, '');
         }
       }
 
@@ -177,10 +172,6 @@
         padding: 0;
         margin: 0;
         list-style: none;
-      }
-
-      .speaker + .speaker {
-        border-top: thin solid var(--darken-1);
       }
 
       .speaker {
@@ -260,7 +251,7 @@
 
       &.tag-open, &.tag-lunch, &.tag-party {
         h4 {
-          font-size: 2em;
+          font-size: 1.5em;
         }
       }
 

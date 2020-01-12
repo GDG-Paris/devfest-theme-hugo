@@ -8,9 +8,7 @@
 
 	<div class="info">
 		{{ if .Params.level }}
-		<div class="complexity" title="{{ .Params.level }}">
-			<svg><use xlink:href="#level-{{ .Params.level }}"></use></svg>
-		</div>
+		<div class="complexity complexity-{{ .Params.level }}"></div>
 		{{ end }}
 
 		{{ if .Params.tags }}
