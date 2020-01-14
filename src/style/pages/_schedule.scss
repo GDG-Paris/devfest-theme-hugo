@@ -36,7 +36,7 @@
 
   main > section.schedule {
     margin: auto;
-    padding: 10px;
+    padding: 10px 10px 50px;
     max-width: 1440px;
 
     .day {
@@ -392,7 +392,7 @@
 
     main > section.schedule {
       margin: 0;
-      padding: 0 10px 0 70px;
+      padding: 0 10px 50px 70px;
     }
 
     main > section.schedule .day .session {
