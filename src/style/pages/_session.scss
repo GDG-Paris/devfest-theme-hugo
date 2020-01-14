@@ -3,6 +3,9 @@ section.talk {
 }
 
 .talk {
+  margin: 2rem auto 0;
+  max-width: var(--block-text-max-width);
+
   .complexity::before {
     content: 'Niveau : ';
   }
@@ -25,6 +28,7 @@ section.talk {
       display: flex;
       align-items: center;
       padding: var(--space-1) var(--space-3);
+      background-color: var(--base);
       --img-size: 2rem;
 
       .speaker-img {
@@ -91,6 +95,21 @@ section.talk {
     .content {
       margin: var(--space-4) 0;
       flex: 1 1 auto;
+
+      p {
+        line-height: 1.5;
+        font-size: 110%;
+      }
+
+      blockquote.twitter-tweet {
+        border: thin solid var(--darken-2);
+        border-radius: .5em;
+        padding: .75em;
+
+         p  {
+           margin: 0;
+         }
+      }
     }
 
     .speakers .speaker {
@@ -153,7 +172,18 @@ section.talk {
 
       .social-slides {
         width: auto;
-        color: inherit;
+        margin-top: 1em;
+        background: var(--primary);
+        color: var(--primary-txt);
+        font-size: 1.25em;
+        padding: .125em .75em;
+        border-radius: 1em;
+        &:focus, &:active , &:hover {
+          box-shadow: .0625em .0625em .125em var(--darken-3);
+        }
+        svg {
+          max-width: 2ch;
+        }
       }
     }
 

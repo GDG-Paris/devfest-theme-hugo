@@ -52,7 +52,12 @@
 		{{ range where (where $.Site.Data.rooms "key" $room.room) "skip" "!=" true }}
 		<!-- Room {{ $room.room }} -->
 		<div class="room {{ if (modBool $index 2)}}even{{end}}" style="--room: {{ $index }};">
-			<h3>{{ .label }}</h3>
+			<h3>
+				{{ .label }}
+				{{ if .description }}
+				<small>{{ .description }}</small>
+				{{ end }}
+			</h3>
 		</div>
 
 		{{ range $room.slots }}
@@ -61,7 +66,7 @@
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
-		<div class="session tag-{{ anchorize (delimit ($sessionPage.Params.tags | default (slice)) " " ) }}"
+		<div class="session format-{{$sessionPage.Params.format}} tag-{{ anchorize (delimit ($sessionPage.Params.tags | default (slice)) " " ) }}"
 		style="--room: {{ $index }}; --row-start: {{ $slot.row.start }}; --row-end: {{ $slot.row.end }};">
 
 		<span class="start">

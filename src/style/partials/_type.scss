@@ -1,9 +1,7 @@
+
+
 .type-conference {
   --duration: '40';
-}
-
-.type-codelab {
-  --duration: '120';
 }
 
 .type-quickie {
@@ -11,5 +9,9 @@
 }
 
 .type-keynote {
+  --duration: '30';
+}
+
+.type-office-hours {
   --duration: '30';
 }

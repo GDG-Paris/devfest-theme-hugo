@@ -7,9 +7,6 @@
 	<hr>
 
 	<div class="info">
-		{{ if .Params.level }}
-		<div class="complexity complexity-{{ .Params.level }}"></div>
-		{{ end }}
 
 		{{ if .Params.tags }}
 		<div class="tags">
@@ -20,7 +17,21 @@
 			{{ end }}
 		</div>
 		{{ end }}
+
+		{{ if .Params.level }}
+		<div class="complexity complexity-{{ .Params.level }}"></div>
+		{{ end }}
+
+		{{ if .Params.presentation }}
+		<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+		{{ end }}
+
+		{{ if .Params.videoId }}
+		<div class="video">{{ partial "icon.html" "youtube" }}</div>
+		{{ end }}
+
 	</div>
+
 
 	{{ if .Params.speakers }}
 	<ul class="speakers {{ if eq 1 (len .Params.speakers) }}single{{ else }}multi{{ end }}">

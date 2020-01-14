@@ -5,7 +5,7 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="Description" content="{{ .Site.Params.description }}">
-	<meta name="Keywords" content="{{ .Site.Params.keyword }}">
+	<meta name="google-site-verification" content="{{ .Site.Params.googleWebmasterKey }}">
 
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 	{{/* NOTE: These Hugo Internal Templates can be found starting at
@@ -13,7 +13,7 @@
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/google_news.html" . -}}
 	{{- template "_internal/schema.html" . -}}
-	{{ template "_internal/twitter_cards.html" . }}
+	{{- template "_internal/twitter_cards.html" . -}}
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
 
