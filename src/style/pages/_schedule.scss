@@ -35,9 +35,9 @@
   }
 
   main > section.schedule {
-    margin: 1rem 2rem 2rem;
-    padding: var(--space-3) var(--container-margin);
-
+    margin: auto;
+    padding: 10px;
+    max-width: 1440px;
 
     .day {
       display: none;
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: flex-start;
     color: var(--primary);
-    background-color: var(--primary-txt);
+    background-color: var(--lighten-3);
     margin: .125em;
 
     h3 {
@@ -83,7 +83,7 @@
   }
 
   .start, .slot {
-    font-size: 2em;
+    font-size: 1.8em;
     color: var(--base-secondary-text);
 
     .mm {
@@ -94,7 +94,7 @@
   .start {
     position: absolute;
     top: 0;
-    left: -3.5ch;
+    left: -3.8ch;
   }
 
   .slot {
@@ -155,7 +155,7 @@
         text-shadow: 2px 1px 1px white;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        overflow: auto;
       }
 
       hr {
@@ -178,6 +178,7 @@
             max-width: 1.5em;
           }
         }
+
         .tags {
           float: right;
         }
@@ -275,7 +276,7 @@
 
       &.tag-open, &.tag-lunch, &.tag-party {
         h4 {
-          font-size: 2em;
+          font-size: 1.8em;
         }
       }
 
@@ -386,18 +387,16 @@
 
 }
 
-
 @include mq($until: xxl) {
-  .section.schedule main > section.schedule {
-    --container-margin: 0em;
-  }
-}
-
-@include mq($until: lg) {
   .section.schedule {
+
+    main > section.schedule {
+      margin: 0;
+      padding: 0 10px 0 70px;
+    }
+
     main > section.schedule .day .session {
       --container-margin: 0em;
-      margin: 1rem .5rem 2rem 2.25em;
 
       .start {
         display: block;
