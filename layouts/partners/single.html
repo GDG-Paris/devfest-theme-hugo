@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section class="header">
-	<div class="card" style="background-image: url({{ .Params.logo }});"></div>
+	<img class="logo" src="{{ .Params.logo }}"/>
 	<h1>{{ .Title }}</h1>
 	{{ if .Params.website }}
 	<a href="{{ .Params.website }}">{{ .Params.website }}</a>
@@ -10,7 +10,6 @@
 
 <section class="content">
 	{{ .Content }}
-
 </section>
 
 {{ if .Params.why }}

@@ -1,41 +1,22 @@
 .page.partners {
 
   .header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "logo title"
-      "logo website";
-    align-items: center;
 
-    .card {
-      grid-area: logo;
-      height: 8em;
-      width: 12em;
-      display: inline-block;
-
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-origin: content-box;
-      padding: .25em;
-
-      margin-right: 1em;
+    .logo {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 300px;
       box-shadow: .125em .125em .25em rgba(0, 0, 0, .5);
+      margin-bottom: 20px;
     }
 
     h1 {
-      grid-area: title;
-      align-self: end;
-      font-size: 2.5em;
+      margin-bottom: 20px;
     }
-    a {
-      grid-area: website;
-      align-self: start;
-    }
-  }
 
-  .why {
+    a {
+      word-break: break-word;
+    }
   }
 
   .socials {
@@ -46,6 +27,7 @@
       display: flex;
       align-items: center;
       font-size: 2em;
+
       li {
         margin: .25em;
       }
@@ -86,9 +68,6 @@
             width: 2ch;
           }
         }
-
-
-
       }
     }
   }

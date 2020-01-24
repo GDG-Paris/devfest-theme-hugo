@@ -8,7 +8,6 @@
   .hero {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 
     header, .description {
       padding: var(--space-4) var(--container-margin);
@@ -17,7 +16,7 @@
     header {
       align-self: center;
       padding-left: 0;
-
+      margin: 2rem 1rem 1rem 1rem;
       display: flex;
       align-items: center;
 
@@ -62,6 +61,8 @@
 
     .description {
 
+      padding: 0 1rem;
+
       .talks {
         margin: 1rem auto ;
         max-width: var(--block-text-max-width);
@@ -71,17 +72,20 @@
         max-width: var(--theJdrSize);
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
 
         li {
           margin: 10px 0;
         }
 
         .talk {
-          margin-top: 1rem;
+          margin: 0;
           border: thin solid var(--darken-1);
           display: inline-flex;
           padding: var(--space-2);
           border-radius: var(--space-1);
+          align-items: center;
+          text-align: left;
 
           .tags, .language {
             margin-right: 1ch;
@@ -102,7 +106,7 @@
 
   section.speaker {
     align-self: center;
-    margin: 1rem auto ;
+    margin: 1rem;
     max-width: var(--block-text-max-width);
 
     header {
@@ -120,6 +124,10 @@
     p {
       line-height: 1.5;
       font-size: 110%;
+    }
+
+    .bio {
+      min-width: 50vw;
     }
 
   }
